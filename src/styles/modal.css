@@ -1,0 +1,56 @@
+.login-modal{
+    display:flex;
+    gap:10px;
+    flex-direction: column;
+    background-color: whitesmoke;
+    padding: 100px;
+    position: relative;
+    border-radius: 15px;
+
+}
+.login-heading{
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+.click-sigIn{
+    color:blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.login-form
+{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.login-form >input{
+    padding:10px;
+    border-radius: 10px;
+    
+}
+.form-btn{
+    display: grid;
+    place-items: center;
+
+}
+.form-btn > button{
+    padding:5px;
+    background-color: lightgreen;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.close-btn{
+
+    padding: 5px;
+    background-color: rgb(249, 41, 41);
+    border-radius: 8px; 
+    cursor: pointer;
+}
+.modal-btns{
+    display:flex;
+    margin:20px 0;
+
+    justify-content: space-evenly;
+    
+}

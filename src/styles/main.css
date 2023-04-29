@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+
+
+    
+
+
+
+
+
+body{
+    background-color: whitesmoke;
+}
+
+
+.main{
+    display:flex;
+
+
+}
+
+.left-title{
+    padding:10px;
+    text-align: center;
+    font-weight: 700;
+    background: whitesmoke;
+    margin:5px;
+}
+.left{
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin-left:10px;
+    border-radius: 10px;
+    margin:10px;
+    font-family: 'Playfair Display', serif;
+
+}
+.left > button{
+    font-family: 'Playfair Display', serif;
+    text-align: left;
+    padding:8px;
+    background-color: transparent;
+    border:none;
+
+}
+.left > button:hover{
+   background-color: rgba(13, 229, 244, 0.078);
+   border-left: 5px solid rgb(142, 4, 69);
+   padding-left: 10px;
+}
+
+#selected-btn{
+    background-color: rgba(13, 229, 244, 0.078);
+    border-left: 5px solid rgb(142, 4, 69);
+    padding-left: 10px;
+}
+
+.products{
+    flex-basis: 80%;
+}

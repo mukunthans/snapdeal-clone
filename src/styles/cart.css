@@ -1,0 +1,70 @@
+.checkout_page {
+    display: flex;
+    width: 95%;
+    margin:20px;
+  }
+  .cart{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+  }
+  .user-info{
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    padding: 15px;
+    margin:10px;
+    background-color: white;
+    padding:20px;
+    border-radius: 20px;
+  }
+  .user-pic > img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  .cartItems{
+
+    flex-basis: 65%;
+
+    padding:20px;
+    background-color: white;
+    border-radius: 20px;
+    max-height: 600px;
+    overflow-y: auto;
+  }
+  .billingSection{
+    margin-left:20px ;
+    height:600px;
+    background-color: rgb(236, 238, 241);
+    flex-basis: 35%;
+    border-radius: 20px;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+
+  }
+  .billingSection > h2,h1{
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+
+  }
+  .billingSection > h3{
+    display: flex;
+    justify-content: space-between;
+}
+.checkout-btn{
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  background-color: rgb(92, 167, 189);
+  border: none;
+  width: 70%;
+  margin-left: auto;
+  margin-right:auto;
+}
+.checkout-btn:hover{
+  opacity: 0.5;
+}

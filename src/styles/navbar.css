@@ -1,0 +1,33 @@
+.nav-bar{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    height:30px;
+    justify-content: space-between;
+    background-color: #C7003D;
+    align-items: center;
+    color: white;
+    font-size: small;
+    position: sticky;
+    top:0;
+    z-index: 2;
+
+}
+
+.nav-bar .nav-left-side{
+
+    justify-content: flex-start;
+
+}
+
+
+.nav-bar .nav-right-side{
+
+    justify-content: flex-end;
+
+}
+
+.nav-bar .nav-right-side a,p{
+    margin: 2px 20px;
+
+}
