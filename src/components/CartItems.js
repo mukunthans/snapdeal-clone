@@ -7,14 +7,15 @@ const CartItems = ({cartData}) => {
     return (
         <div className="cartItems">
             <h1>Shopping Cart</h1>
-            <div>
+           { cartData.length ? <div>
                 {
                     cartData.map((item) => {
                        console.log(item);
                        return <CartItem item={item} key={item.id}/>
                     })
                 }
-            </div>
+            </div> :<div style={{display:"grid",placeItems:"center",height:"80%"}}> <h3 >Your Cart Is Empty</h3>  </div>
+}
         </div>
 
     )

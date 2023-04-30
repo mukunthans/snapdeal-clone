@@ -1,23 +1,31 @@
 import { useEffect } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import DataContext from './context/DataContext';
+import { useContext } from 'react';
+
+import {  Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import SearchBar from "./components/SearchBar";
 import Main from "./components/Main";
 import { useDispatch } from "react-redux";
 import { login, logout } from "./features/user/userSlice";
 import { auth } from "./firebase";
-import { DataProvider } from "./context/DataContext";
+
 import Products from "./components/Products";
 import ProductPage from "./components/ProductPage";
 import Modal from "./components/Modal";
 import { RequireAuth } from './components/RequireAuth'
 import Cart from "./components/Cart";
+import { useNavigate } from 'react-router-dom';
+import Checkout from "./components/Checkout";
 
 function App() {
   
+  const navigate = useNavigate();
     const dispatch = useDispatch();
+    const {setIsOpen , setSignUpIsOpen } = useContext(DataContext);
+
     useEffect(() => {
-      console.log("hey");
+
       auth.onAuthStateChanged((authUser) => {
         if (authUser) {
           dispatch(
@@ -35,19 +43,21 @@ function App() {
       });
     }, [dispatch]);
 
-  
+  const closeLogin = () => {
+    navigate('/');
+    setIsOpen(false);
+}
 
 
   return (
     <div className="App">
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <DataProvider>
+        
           <NavBar />
           <SearchBar />
           <Routes>
             <Route path="/" element={<Main />}>
               <Route index element={<Products />} />
-              <Route path="login" element={<Modal />} />
+
               <Route path=":id" element={<ProductPage />} />
               <Route
           path='cart'
@@ -55,14 +65,26 @@ function App() {
             <RequireAuth>
              
               <Cart />
+              </RequireAuth>
               
-            </RequireAuth>
+            
           }
         />
+                    <Route path="checkout" element={
+              <RequireAuth>
+            <Checkout/>
+            </RequireAuth>
+            }/>
+         <Route path="login" element={<Modal open={true}
+             onClose={closeLogin}
+             openSignUp={() => {
+             setSignUpIsOpen(true);
+        }}/>} />
             </Route>
-          </Routes>
-        </DataProvider>
-      </BrowserRouter>
+
+            </Routes>
+        
+
     </div>
   );
 }

@@ -4,9 +4,13 @@ import { useNavigate } from "react-router-dom";
 import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
-import { auth } from "../firebase";
 import '../styles/modal.css'
 import { useLocation } from "react-router-dom";
+import { auth, googleProvider } from "../firebase";
+import {
+  signInWithPopup,
+} from "firebase/auth";
+
 
 const MODAL_STYLES = {
   position: "fixed",
@@ -23,7 +27,7 @@ const OVERLAY_STYLES = {
   left: 0,
   right: 0,
   bottom: 0,
-  backgroundColor: "rgba(0, 0, 0, .85)",
+  backgroundColor: "rgba(0, 0, 0, .7)",
   zIndex: 1000,
 
 };
@@ -49,8 +53,18 @@ export default function Modal({ open, onClose, openSignUp }) {
           alert(error.message);
         }
       };
+      const signInWithGoogle = async () => {
+        try {
+          await signInWithPopup(auth, googleProvider);
+          onClose();
+        } catch (error) {
+          alert(error.message);
+        }
+      };
+     console.log("modal");
+      console.log(auth.currentUser);
 
-  if (!open) return null;
+  if (!open || auth.currentUser) return null;
 
   return ReactDom.createPortal(
     <>
@@ -67,6 +81,16 @@ export default function Modal({ open, onClose, openSignUp }) {
               ref={passRef}
               required
             />
+            <div className="login__authOption">
+            <img
+              className="login__googleAuth"
+              src="https://media-public.canva.com/MADnBiAubGA/3/screen.svg"
+              alt=""
+            />
+            <p onClick={signInWithGoogle}>Continue With Google</p>
+          </div>
+
+        
             <div className="modal-btns">
             <div className="form-btn">
               <button onClick={(e) => login(e)}>Submit</button>

@@ -18,6 +18,7 @@ const Cart = () => {
             <img src={user.photo || "https://icon-library.com/images/no-profile-picture-icon-female/no-profile-picture-icon-female-24.jpg"}></img>
           </div>
           <div className="user-details">
+           {user.displayName && <h3>Name : {user.displayName}</h3>}
             <h3>Email: {user.email}</h3>
           </div>
         </div>

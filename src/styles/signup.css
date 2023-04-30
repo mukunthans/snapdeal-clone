@@ -1,0 +1,54 @@
+.signUp-modal{
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(rgb(92, 175, 202),rgb(10, 179, 103),aliceblue);
+    border-radius: 30px;
+}
+.signUp-form{
+    padding:20px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;width: 90%;
+
+}
+.signIn__inputField{
+    width: 100%;
+}
+.signIn__inputField > input{
+    padding:10px;
+    width: 100%;
+    text-align: center;
+    border-radius: 15px;
+    
+
+}
+.signUp-form > button {
+
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(104, 237, 108);
+    font-weight: bold;
+    cursor: pointer;
+    width: 50%;
+}
+.sign-close-btn{
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    font-weight: bold;
+    background-color: rgba(227, 44, 44, 0.96);
+    cursor: pointer;
+
+
+
+}
+.signUp-form > button:hover ,.sign-close-btn:hover{
+    opacity: 0.5;
+}

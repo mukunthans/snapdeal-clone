@@ -9,14 +9,19 @@ export const RequireAuth = ({ children }) => {
     const {user} = useSelector((state) => state.user);
     console.log("user");
     console.log(user);
-    const login =  () => {
-      setIsOpen(true);
-    }
+
+
 
   const location = useLocation()
   if (!user) {
-    login();
-    return <Navigate to='/login'  state={{ path: location.pathname }} />
+
+    console.log("navigating");
+    
+    return( <>
+
+     <Navigate to='/login'  state={{ path: location.pathname }}  />
+
+    </>)
   }
   return children;
 }
