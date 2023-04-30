@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/snapdeal-clone/static/css/main.44e06030.css",
-    "main.js": "/snapdeal-clone/static/js/main.034ed867.js",
+    "main.css": "/snapdeal-clone/static/css/main.0e06d3a1.css",
+    "main.js": "/snapdeal-clone/static/js/main.2434503a.js",
     "index.html": "/snapdeal-clone/index.html",
-    "main.44e06030.css.map": "/snapdeal-clone/static/css/main.44e06030.css.map",
-    "main.034ed867.js.map": "/snapdeal-clone/static/js/main.034ed867.js.map"
+    "main.0e06d3a1.css.map": "/snapdeal-clone/static/css/main.0e06d3a1.css.map",
+    "main.2434503a.js.map": "/snapdeal-clone/static/js/main.2434503a.js.map"
   },
   "entrypoints": [
-    "static/css/main.44e06030.css",
-    "static/js/main.034ed867.js"
+    "static/css/main.0e06d3a1.css",
+    "static/js/main.2434503a.js"
   ]
 }
