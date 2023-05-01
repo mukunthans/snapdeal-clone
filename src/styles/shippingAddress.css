@@ -1,0 +1,25 @@
+.shipping{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap:5px;
+    margin-top: 10px;
+}
+.full-width{
+    width: 100%;
+}
+.shipping input {
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+
+
+}
+.checkbox-style{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}

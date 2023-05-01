@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background:linear-gradient(rgb(92, 175, 202),rgb(10, 179, 103),aliceblue);
+    background:rgb(247, 226, 235);
     border-radius: 30px;
 }
 .signUp-form{

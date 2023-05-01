@@ -32,8 +32,8 @@ const CartItem = ({item} ) => {
                 {title}
             </div>
             <div className="cartItem-price">
-                <p> Price/Item :  {formatAmount(price)}
-                <h4>x {quantity}</h4></p>
+                <div style={{display:'flex',flexDirection:'column',alignItems:'center'}}><p> Price/Item :  {formatAmount(price)}</p>
+                <h4>x {quantity}</h4></div>
                 <div className='cartItem-total-btns'>
                     <button onClick={addItem}>+</button>
                     <button onClick={removeItem}>-</button>

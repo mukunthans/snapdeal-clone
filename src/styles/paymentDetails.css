@@ -1,0 +1,41 @@
+.paymentDetails{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    gap:15px;
+    margin-top: 10px;
+    height: 100%;
+    justify-content: space-evenly;
+
+}
+.small-txt{
+    font-size: 12px;
+}
+.pd-inputs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+
+    
+
+}
+.pd-input > input {
+    
+        border: none;
+        border-bottom: 1px solid black;
+        margin: 5px;
+        padding: 5px;
+        width: 100%;
+    
+    
+    
+}
+
+.sa-btns{
+    display: flex;
+    justify-content: flex-end;
+    gap:10px;
+    width: 100%;
+}
